@@ -11,6 +11,7 @@ export default function NavBar() {
         </Heading>
         <Spacer />
         <HStack color='green.800' spacing={8}>
+          <Link href={'/'}>Home</Link>
           <Link href={'/about'}>About</Link>
           <Link href={'/leaderboard'}>Leaderboard</Link>
         </HStack>
