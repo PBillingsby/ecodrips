@@ -8,10 +8,10 @@ export default function App({ Component }) {
     <ChakraProvider>
       <Container maxW='container.xl'>
         <Navbar />
-        <Box border='1px solid black' height='80vh' p='4'>
+        <Box border='1px solid green' borderRadius='2' height='80vh' px='8' py='2'>
           <Component />
         </Box>
       </Container>
-    </ChakraProvider>
+    </ChakraProvider >
   )
 }
