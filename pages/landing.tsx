@@ -1,9 +1,7 @@
-import { Heading } from '@chakra-ui/react';
+import LandingPage from '../components/LandingPage'
 
 export default function Landing() {
   return (
-    <Heading size='md' color='green.800'>
-      Landing
-    </Heading>
+    <LandingPage />
   )
 }
