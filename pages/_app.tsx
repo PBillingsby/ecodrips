@@ -1,8 +1,17 @@
 import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import Navbar from '../components/Navbar'
+import * as React from 'react'
+import { ChakraProvider, Container, Box } from '@chakra-ui/react'
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+export default function App({ Component }) {
+  return (
+    <ChakraProvider>
+      <Container maxW='container.xl'>
+        <Navbar />
+        <Box border='1px solid black' height='80vh' p='4'>
+          <Component />
+        </Box>
+      </Container>
+    </ChakraProvider>
+  )
 }
-
-export default MyApp
