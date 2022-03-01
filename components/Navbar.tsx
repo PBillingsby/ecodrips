@@ -15,7 +15,7 @@ export default function NavBar() {
         <HStack color='green' spacing={8}>
           <Link href={'/'}>Home</Link>
           <Link href={'/about'}>About</Link>
-          <Link href={'/leaderboard'}>Leaderboard</Link>
+          <Link href={'/tracker'}>Tracker</Link>
         </HStack>
       </Flex>
     </Box>

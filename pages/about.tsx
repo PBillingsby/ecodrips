@@ -1,9 +1,7 @@
-import { Heading } from '@chakra-ui/react';
+import AboutPage from '../components/AboutPage'
 
 export default function About() {
   return (
-    <Heading size='md' color='green'>
-      About
-    </Heading>
+    <AboutPage />
   )
 }
