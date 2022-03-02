@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 import * as React from 'react'
 import { ChakraProvider, Container, Box } from '@chakra-ui/react'
 
-export default function App({ Component }) {
+export default function App({ Component }: { Component: any }) {
   return (
     <ChakraProvider>
       <Container maxW='container.xl'>
