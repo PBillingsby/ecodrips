@@ -21,7 +21,7 @@ export default function LandingPage() {
             }}>Start Dripping</Button>
           </Center>
         </Box>
-      </VStack >
+      </VStack>
     </Flex >
   )
 }

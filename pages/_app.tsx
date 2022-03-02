@@ -7,7 +7,7 @@ import { ChakraProvider, Container, Box } from '@chakra-ui/react'
 export default function App({ Component }: { Component: any }) {
   return (
     <ChakraProvider>
-      <Container maxW='container.xl' borderRadius={4} px={4} bg='#01281a' h='95vh' mt={2}>
+      <Container maxW='container.xl' h='95vh' overflow='scroll' borderRadius={4} px={4} bg='#01281a' mt={2}>
         <Navbar />
         <Box py={2}>
           <Component />
