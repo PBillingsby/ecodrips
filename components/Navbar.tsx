@@ -5,7 +5,6 @@ import { DropletHalf } from 'tabler-icons-react';
 
 export default function NavBar() {
   return (
-<<<<<<< HEAD
     <Box px={8} pb={8}>
       <Flex py={8} color='teal.100'>
         <DropletHalf />
@@ -23,19 +22,6 @@ export default function NavBar() {
           <Box _hover={{ color: 'white' }}>
             <Link href={'/tracker'}>Tracker</Link>
           </Box>
-=======
-    <Box px='8' pb='8'>
-      <Flex pb='8' pt='8'>
-        <DropletHalf color='green' />
-        <Heading size='md' color='green'>
-          ecoDrips
-        </Heading>
-        <Spacer />
-        <HStack color='green' spacing={8}>
-          <Link href={'/'}>Home</Link>
-          <Link href={'/about'}>About</Link>
-          <Link href={'/tracker'}>Tracker</Link>
->>>>>>> main
         </HStack>
       </Flex>
     </Box >
