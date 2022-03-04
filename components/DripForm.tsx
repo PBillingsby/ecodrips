@@ -21,7 +21,7 @@ export default function DripForm() {
   }
   return (
     <>
-      <FormControl h='auto' mt={2}>
+      <FormControl mt={2}>
         <InputGroup pt={2} size='md' py={6}>
           <InputLeftAddon bg='none' pr={8}>$DAI</InputLeftAddon>
           <NumberInput onChange={onChange} name="dripAmount" min={0} step={0.01}>
