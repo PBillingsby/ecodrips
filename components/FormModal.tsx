@@ -23,7 +23,7 @@ export default function FormModal(props: FormProps) {
     <Box>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent h='25vh'>
           <HStack mt={4}>
             <Icon as={DropletHalf} color='#01281a' w={6} h={6} ml={6} />
             <Text color='#01281a'>Start Dripping</Text>
