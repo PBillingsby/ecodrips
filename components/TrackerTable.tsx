@@ -25,7 +25,7 @@ export default function TrackerTable(props: TrackerProps) {
         <Tbody>
           {props.dripData.data.orgs.map((obj: any) => {
             return (
-              <Tr color='white'>
+              <Tr color='white' key={obj.id}>
                 <Td>{splitAddress(obj.id)}</Td>
                 <Td>{splitAddress(obj.creator)}</Td>
                 <Td>{splitAddress(obj.owner)}</Td>
