@@ -1,4 +1,4 @@
-import { Heading, Box, Text, VStack, Image, Flex, Spacer } from '@chakra-ui/react';
+import { Heading, Box, Text, VStack } from '@chakra-ui/react';
 
 export default function AboutPage() {
   return (
