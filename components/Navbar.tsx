@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { Box, Flex, Spacer, HStack, Stack, Heading } from '@chakra-ui/react';
+import { Box, Spacer, HStack, Stack, Heading } from '@chakra-ui/react';
 import { DropletHalf } from 'tabler-icons-react';
 
 export default function NavBar() {

@@ -1,6 +1,5 @@
-import { Table, Tr, Thead, Td, Th, Tbody, Button, Box, Center } from '@chakra-ui/react';
+import { Table, Tr, Thead, Td, Th, Tbody, Button, Box } from '@chakra-ui/react';
 import { Copy, Coin } from 'tabler-icons-react';
-import { DropletHalf } from 'tabler-icons-react';
 
 interface TrackerProps {
   dripData: any

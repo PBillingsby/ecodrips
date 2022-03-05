@@ -1,4 +1,4 @@
-import { Text, Box, VStack, Heading, Button, Center, Flex } from '@chakra-ui/react';
+import { Text, Box, VStack, Heading, Button, Center } from '@chakra-ui/react';
 
 export default function LandingPage() {
   return (
