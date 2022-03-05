@@ -1,14 +1,16 @@
 import { Heading } from '@chakra-ui/react';
 import { createClient } from 'urql';
-import { useEffect } from 'react';
-
+import { useEffect, useState } from 'react';
+import TrackerTable from './TrackerTable'
 const query = `
-  query {
-    tokens {
+  {
+    orgs(first: 5) {
       id
-      tokenID
-      contentURI
-      metadataURI
+      owner
+      safe {
+        id
+      }
+      creator
     }
   }
 `
@@ -17,18 +19,94 @@ const API_KEY = `https://gateway.thegraph.com/api/${process.env.NEXT_PUBLIC_RADI
 const client = createClient({
   url: API_KEY
 })
+
 export default function TrackerPage() {
+  const [dripData, setDripData] = useState({})
+
   useEffect(() => {
     fetchData();
   }, [])
   async function fetchData() {
-    const response = await client.query(query).toPromise();
-    // Handle data returned from query
-    console.log(response);
+    // const response = await client.query(query).toPromise();
+    // if (!response.error) {
+    setDripData(dripsData)
+    // }
   }
+
   return (
-    <Heading size='lg' p={2} color='teal.100'>
-      Drip Tracker
-    </Heading>
+    <>
+      <Heading size='lg' p={2} color='teal.100'>
+        Drip Tracker
+      </Heading>
+      {Object.keys(dripsData).length && <TrackerTable dripData={dripsData} />}
+    </>
   )
+}
+
+
+export const dripsData = {
+  data: {
+    orgs: [
+      {
+        id: '0X0000000000000000000000000000000000000000',
+        creator: '0X0000000000000000000000000000000000000000',
+        owner: '0X0000000000000000000000000000000000000000'
+      },
+      {
+        id: '0X0000000000000000000000000000000000000000',
+        creator: '0X0000000000000000000000000000000000000000',
+        owner: '0X0000000000000000000000000000000000000000'
+      },
+      {
+        id: '0X0000000000000000000000000000000000000000',
+        creator: '0X0000000000000000000000000000000000000000',
+        owner: '0X0000000000000000000000000000000000000000'
+      },
+      {
+        id: '0X0000000000000000000000000000000000000000',
+        creator: '0X0000000000000000000000000000000000000000',
+        owner: '0X0000000000000000000000000000000000000000'
+      },
+      {
+        id: '0X0000000000000000000000000000000000000000',
+        creator: '0X0000000000000000000000000000000000000000',
+        owner: '0X0000000000000000000000000000000000000000'
+      },
+      {
+        id: '0X0000000000000000000000000000000000000000',
+        creator: '0X0000000000000000000000000000000000000000',
+        owner: '0X0000000000000000000000000000000000000000'
+      },
+      {
+        id: '0X0000000000000000000000000000000000000000',
+        creator: '0X0000000000000000000000000000000000000000',
+        owner: '0X0000000000000000000000000000000000000000'
+      },
+      {
+        id: '0X0000000000000000000000000000000000000000',
+        creator: '0X0000000000000000000000000000000000000000',
+        owner: '0X0000000000000000000000000000000000000000'
+      },
+      {
+        id: '0X0000000000000000000000000000000000000000',
+        creator: '0X0000000000000000000000000000000000000000',
+        owner: '0X0000000000000000000000000000000000000000'
+      },
+      {
+        id: '0X0000000000000000000000000000000000000000',
+        creator: '0X0000000000000000000000000000000000000000',
+        owner: '0X0000000000000000000000000000000000000000'
+      },
+      {
+        id: '0X0000000000000000000000000000000000000000',
+        creator: '0X0000000000000000000000000000000000000000',
+        owner: '0X0000000000000000000000000000000000000000'
+      },
+      {
+        id: '0X0000000000000000000000000000000000000000',
+        creator: '0X0000000000000000000000000000000000000000',
+        owner: '0X0000000000000000000000000000000000000000'
+      }
+    ]
+  }
 }
