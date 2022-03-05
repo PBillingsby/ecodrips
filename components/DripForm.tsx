@@ -29,8 +29,8 @@ export default function DripForm() {
           <InputLeftAddon bg='none'>
             <Image position='relative' w='25px' src='https://cryptologos.cc/logos/multi-collateral-dai-dai-logo.png?v=022' />
           </InputLeftAddon>
-          <NumberInput onChange={onChange} name="dripAmount">
-            <NumberInputField min={0} step={0.01} placeholder='/month' />
+          <NumberInput onChange={onChange} min={0} name="dripAmount">
+            <NumberInputField step={0.01} placeholder='/month' />
             <NumberInputStepper>
               <NumberIncrementStepper />
               <NumberDecrementStepper />
