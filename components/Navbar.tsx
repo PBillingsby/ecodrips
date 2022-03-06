@@ -17,9 +17,6 @@ export default function NavBar() {
             <Link href={'/'}> Home</Link>
           </Box>
           <Box _hover={{ color: 'white' }}>
-            <Link href={'/about'}>About</Link>
-          </Box>
-          <Box _hover={{ color: 'white' }}>
             <Link href={'/tracker'}>Tracker</Link>
           </Box>
         </HStack>
