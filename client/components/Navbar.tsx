@@ -1,13 +1,13 @@
 import Link from 'next/link';
 
-import { Box, Spacer, HStack, Stack, Heading } from '@chakra-ui/react';
+import { Box, Spacer, HStack, Stack, Heading, Icon } from '@chakra-ui/react';
 import { DropletHalf } from 'tabler-icons-react';
 
 export default function NavBar() {
   return (
     <Box px={8} pb={8}>
       <Stack direction={['column', 'row']} py={8} color='teal.100'>
-        <DropletHalf />
+        <Icon as={DropletHalf} size='sm' />
         <Heading size='xl'>
           ecoDrips
         </Heading>

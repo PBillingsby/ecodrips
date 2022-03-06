@@ -5,9 +5,9 @@ import {
   Icon,
   ModalCloseButton,
   ModalBody,
-  Text,
-  HStack,
+  Heading,
   Box,
+  Flex
 } from '@chakra-ui/react'
 import { DropletHalf } from 'tabler-icons-react';
 import DripForm from './DripForm'
@@ -28,11 +28,11 @@ export default function FormModal(props: FormProps) {
           backdropInvert='20%'
           backdropBlur='2px'
         />
-        <ModalContent h={['35vh', '25vh']}>
-          <HStack mt={4}>
+        <ModalContent maxW={['75vh', '40vw']}>
+          <Flex mt={4}>
             <Icon as={DropletHalf} color='#01281a' w={6} h={6} ml={6} />
-            <Text color='#01281a'>Start Dripping</Text>
-          </HStack>
+            <Heading size='md' color='#01281a'>Start Dripping</Heading>
+          </Flex>
           <ModalCloseButton size='sm' p={6} />
           <ModalBody py={6} margin='0 auto'>
             <DripForm />
