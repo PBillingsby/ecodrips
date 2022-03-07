@@ -1,4 +1,4 @@
-import { Text, Box, VStack, Heading, Button, Center, Link, List, ListIcon, ListItem, useDisclosure } from '@chakra-ui/react';
+import { Text, Box, VStack, Heading, Button, Center, Link, List, ListIcon, ListItem, Divider, useDisclosure } from '@chakra-ui/react';
 import { Point } from 'tabler-icons-react';
 import FormModal from './FormModal'
 import HowItWorks from './HowItWorks'
@@ -6,10 +6,10 @@ import HowItWorks from './HowItWorks'
 export default function LandingPage() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
-    <VStack>
-      <Box p={2} color='teal.100' borderBottom='1px solid teal.100'>
+    <VStack px={[0, 6]}>
+      <Box p={2} color='teal.100' borderBottom='1px solid teal.100' maxW={'75vw'}>
         <Heading size='xl'>About ecoDrips</Heading>
-        <Text py={2}>Welcome to ecoDrips. We are a community of crypto enthusiasts who believe we can positively change the future of our planet through consistent and regular crypto contributions.</Text>
+        <Text py={2}>Welcome to ecoDrips. We are a community of crypto enthusiasts who believe <Divider orientation='vertical' />we can positively change the future of our planet through consistent and regular crypto contributions.</Text>
         <Text py={2}>Two significant challenges non-profit organizations face are:</Text>
         <List spacing={3}>
           <ListItem>
@@ -22,7 +22,7 @@ export default function LandingPage() {
           </ListItem>
         </List>
 
-        <Text py={2}>As a decentralized charity, our focus is to solve these two problems through a drip campaign where individuals can commit to contributing a reoccurring amount of as little as 3 DAI per month to their favorite non-profit organization.</Text>
+        <Text py={2}>As a decentralized charity, our focus is to solve these two problems through a drip campaign where individuals <Divider orientation='vertical' />can commit to contributing a reoccurring amount of as little as 3 DAI per month to their favorite non-profit organization.</Text>
 
         <Heading size='xl'>How It Works</Heading>
         <Text>If you have been thinking about donating crypto but are not sure where to start, this is an excellent place to begin.</Text>
