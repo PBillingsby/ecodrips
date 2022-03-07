@@ -7,15 +7,14 @@ interface TrackerProps {
 
 export default function TrackerTable(props: TrackerProps) {
   const splitAddress = (address: string) => {
-    return (`${address.slice(0, 10)}...${address.slice(address.length - 4)}`)
+    return (`${address.slice(0, 6)}...${address.slice(address.length - 4)}`)
   }
 
   return (
-    <Box overflow='scroll' w='80vw' m='auto'>
-      <Table>
+    <Box overflow='scroll' w={['40vw', '80vw']} m='auto'>
+      <Table textAlign='center'>
         <Thead color='white'>
           <Tr color='white'>
-            <Th>ID</Th>
             <Th>Creator</Th>
             <Th>Owner</Th>
             <Th>CashOut</Th>
@@ -25,7 +24,6 @@ export default function TrackerTable(props: TrackerProps) {
           {props.dripData.data.orgs.map((obj: any) => {
             return (
               <Tr color='white' key={obj.id}>
-                <Td>{splitAddress(obj.id)}</Td>
                 <Td>{splitAddress(obj.creator)}</Td>
                 <Td>{splitAddress(obj.owner)}</Td>
                 <Td>

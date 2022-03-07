@@ -1,4 +1,4 @@
-import { Heading } from '@chakra-ui/react';
+import { Heading, Box } from '@chakra-ui/react';
 import { createClient } from 'urql';
 import { useEffect, useState } from 'react';
 import TrackerTable from './TrackerTable'
@@ -29,6 +29,7 @@ export default function TrackerPage() {
   async function fetchData() {
     // const response = await client.query(query).toPromise();
     // if (!response.error) {
+      // This line below is using hard-coded data for testing
     setDripData(dripsData)
     // }
   }
@@ -38,7 +39,9 @@ export default function TrackerPage() {
       <Heading size='lg' p={2} color='teal.100'>
         Drip Tracker
       </Heading>
+      <Box p={0}>
       {Object.keys(dripsData).length && <TrackerTable dripData={dripsData} />}
+      </Box>
     </>
   )
 }
@@ -74,7 +77,7 @@ export const dripsData = {
       },
       {
         id: '0X0000000000000000000000000000000000000000',
-        creator: '0X0000000000000000000000000000000000000000',
+        creator: '0X00000000000000000000000000000000000000001',
         owner: '0X0000000000000000000000000000000000000000'
       },
       {

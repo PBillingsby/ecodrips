@@ -6,7 +6,7 @@ import { DropletHalf } from 'tabler-icons-react';
 export default function NavBar() {
   return (
     <Box px={8} pb={8}>
-      <Stack direction={['column', 'row']} py={8} color='teal.100'>
+      <Stack direction={['column', 'row']} color='teal.100'>
         <HStack>
           <Icon as={DropletHalf} />
           <Heading size='2xl'>

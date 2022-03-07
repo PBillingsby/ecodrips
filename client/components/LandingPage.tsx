@@ -28,20 +28,20 @@ export default function LandingPage() {
         <Text>If you have been thinking about donating crypto but are not sure where to start, this is an excellent place to begin.</Text>
         <HowItWorks />
       </Box>
-      <Box p={2} color='teal.100'>
-        <Heading size='xl'>The Drip</Heading>
-        <Text py={2}>Here are a few ecoDrips supported non-profit organizations:</Text>
+      <Box p={2} color='teal.100' w='50%' borderTop='3px solid white'>
+        <Heading size='xl' textAlign='center'>The Drip</Heading>
       </Box>
       <Box p={2} color='teal.100' textAlign='center'>
-        <Text py={2}><Link fontSize={28} href="https://trees.org/crypto/" isExternal>trees.org</Link></Text>
-        <Text py={2}><Link fontSize={28} href="https://www.oneearth.org/crypto/" isExternal>One Earthh</Link></Text>
-        <Text py={2}><Link fontSize={28} href="https://wildlifesos.org/cryptocurrency-donations/?ref=donateincrypto.com" isExternal>Wildlife SOS</Link></Text>
-        <Text py={2}><Link fontSize={28} href="https://thewaterproject.org/donate-crypto" isExternal>The Water Project</Link></Text>
+        <Text py={2}>Here are a few ecoDrips supported non-profit organizations:</Text>
+        <Text py={2}><Link fontSize={18} href="https://trees.org/crypto/" isExternal>trees.org</Link></Text>
+        <Text py={2}><Link fontSize={18} href="https://www.oneearth.org/crypto/" isExternal>One Earthh</Link></Text>
+        <Text py={2}><Link fontSize={18} href="https://wildlifesos.org/cryptocurrency-donations/?ref=donateincrypto.com" isExternal>Wildlife SOS</Link></Text>
+        <Text py={2}><Link fontSize={18} href="https://thewaterproject.org/donate-crypto" isExternal>The Water Project</Link></Text>
       </Box>
       <Center my={[0, 4]}>
-        <Button onClick={onOpen} w={['10rem', '20rem']} color='#eee' p={[0, 8]} bgGradient='linear(to-r, #01281a, #316e46, #3c5e48)' _hover={{
-          background: "teal.100",
-          color: "#01281a",
+        <Button id='drip-button' onClick={onOpen} w={['10rem', '20rem']} color='#eee' p={[0, 8]} bgGradient='linear(to-r, #01281a, #316e46, #3c5e48)' _hover={{
+          background: 'teal.100',
+          color: '#01281a',
         }}>Start Dripping</Button>
         <FormModal isOpen={isOpen} onClose={onClose} />
       </Center>
