@@ -7,10 +7,12 @@ export default function NavBar() {
   return (
     <Box px={8} pb={8}>
       <Stack direction={['column', 'row']} py={8} color='teal.100'>
-        <Icon as={DropletHalf} size='sm' />
-        <Heading size='xl'>
-          ecoDrips
-        </Heading>
+        <HStack>
+          <Icon as={DropletHalf} />
+          <Heading size='2xl'>
+            ecoDrips
+          </Heading>
+        </HStack>
         <Spacer />
         <HStack spacing={8}>
           <Box _hover={{ color: 'white' }}>

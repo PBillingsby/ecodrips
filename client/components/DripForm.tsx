@@ -38,7 +38,7 @@ export default function DripForm() {
           <VStack>
             <FormLabel>Months</FormLabel>
             <NumberInput maxW={[24, 48]} min={0} max={12}>
-              <NumberInputField step={0.01} onChange={onChange} name='months' />
+              <NumberInputField step={0.01} onChange={onChange} name='months' placeholder='1' />
               <NumberInputStepper>
                 <NumberIncrementStepper />
                 <NumberDecrementStepper />
@@ -48,12 +48,12 @@ export default function DripForm() {
         </InputGroup>
         <InputGroup>
           <VStack>
-            <FormLabel>$DAI per month</FormLabel>
+            <FormLabel>$DAI/month</FormLabel>
             <Flex>
               <InputLeftAddon bg='none' display={['none', 'flex']}>
                 <Image position='relative' w='25px' src='https://cryptologos.cc/logos/multi-collateral-dai-dai-logo.png?v=022' />
               </InputLeftAddon>
-              <NumberInput maxW={[24, 48]} onChange={setDrip} min={3} name='amount' placeholder=''>
+              <NumberInput maxW={[24, 48]} onChange={setDrip} min={3} name='amount' placeholder='3'>
                 <NumberInputField step={0.01} />
                 <NumberInputStepper>
                   <NumberIncrementStepper />
