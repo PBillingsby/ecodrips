@@ -10,7 +10,6 @@
     "type": "git",
     "url": "git+https://github.com/PBillingsby/ecodrips.git"
   },
-<<<<<<< HEAD
   "dependencies": {
     "@chakra-ui/react": "^1.8.5",
     "@emotion/react": "^11.8.1",
@@ -22,12 +21,11 @@
     "react-dom": "17.0.2",
     "tabler-icons-react": "^1.37.0",
     "urql": "^2.2.0"
-=======
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/PBillingsby/ecodrips/issues"
->>>>>>> wip
   },
   "homepage": "https://github.com/PBillingsby/ecodrips#readme",
   "devDependencies": {
